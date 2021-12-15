@@ -1,5 +1,4 @@
 const path = require('path')
-const morgan = require('morgan')
 const express = require('express')
 const {engine} = require('express-handlebars')
 
@@ -22,8 +21,10 @@ app.set('view engine', '.hbs')
 
 // Middleware
 
-if(process.env.NODE_ENV === 'development')
+if(process.env.NODE_ENV === 'development') {
+  const morgan = require('morgan')
   app.use(morgan('dev'))
+}
 
 app.use(express.urlencoded({extended: false}))
 app.use(express.static(path.join(__dirname, 'public')))
