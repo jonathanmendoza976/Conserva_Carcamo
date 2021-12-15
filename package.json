@@ -15,11 +15,11 @@
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "express-handlebars": "^6.0.2",
     "handlebars": "^4.7.7"
   },
   "devDependencies": {
     "eslint": "^8.4.1",
-    "express-handlebars": "^6.0.2",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.15",
     "prisma": "^3.6.0"
