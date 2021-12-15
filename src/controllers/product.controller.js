@@ -41,7 +41,7 @@ export const update = async (req, res) => {
     await Product.findByIdAndUpdate(id, req.body)
     res.redirect('/products')
   } catch(err) {
-    console.log(err)
+    console.err(err)
   }
 }
 
