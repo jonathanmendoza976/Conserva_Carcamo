@@ -1,11 +1,18 @@
-const path = require('path')
-const express = require('express')
-const {engine} = require('express-handlebars')
+import path from 'path'
+import cors from 'cors'
+import Express from 'express'
+import {engine} from 'express-handlebars'
+import headers from './middlewares/headers'
+import homeRoutes from './routes/home.routes'
+import productRoutes from './routes/product.routes'
+import './config/dotenv.config'
+import './db'
 
-const app = express()
-
+// Initialize
+const app = Express()
 const port = process.env.PORT || 3000
 
+// Settings
 app.set('port', port)
 app.set('views', path.join(__dirname, 'views'))
 app.engine(
@@ -20,15 +27,12 @@ app.engine(
 app.set('view engine', '.hbs')
 
 // Middleware
+app.use(cors())
+app.use(headers)
+app.use(Express.static(path.join(__dirname, 'public')))
 
-if(process.env.NODE_ENV === 'development') {
-  const morgan = require('morgan')
-  app.use(morgan('dev'))
-}
+// Routes
+app.use(homeRoutes)
+app.use(productRoutes)
 
-app.use(express.urlencoded({extended: false}))
-app.use(express.static(path.join(__dirname, 'public')))
-
-app.use(require('./routes/home.routes'))
-
-module.exports = app
+export default app

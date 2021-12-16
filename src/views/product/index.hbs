@@ -1,0 +1,52 @@
+{{#if products}}
+  <div class="row mt-4">
+    {{#each products}}
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">
+              <h4 class="text-center">
+                {{name}}
+              </h4>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="text-muted">
+              {{description}}
+            </p>
+          </div>
+          <div class="card-footer">
+            <div class="row">
+              <div class="col-md-4">
+                <a href="#" class="">
+                  Agregar al carrito
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="/products/{{_id}}/show">
+                  Ver detalles
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="/products/{{_id}}/edit">
+                  Editar
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+{{else}}
+  <div class="h-100 mt-4 d-flex align-items-center justify-content-center">
+    <div class="text-center">
+      <h1>
+        No hay productos ingresados
+      </h1>
+      <a href="/products/create" class="btn btn-primary">
+        Crear el primer producto
+      </a>
+    </div>
+  </div>
+{{/if}}
