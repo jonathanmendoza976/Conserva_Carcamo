@@ -1,11 +1,7 @@
-const pages = {}
-
-pages.home = (_, res) => {
+export const home = (_, res) => {
   res.render('home')
 }
 
-pages.about = (_, res) => {
+export const about = (_, res) => {
   res.render('about')
 }
-
-module.exports = pages

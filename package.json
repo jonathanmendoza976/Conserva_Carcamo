@@ -4,24 +4,36 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon --exec babel-node src/index.js",
+    "build": "babel src -d build && ncp src/views build/views && ncp src/public build/public",
+    "start": "node build/index.js",
+    "eslint": "eslint . --fix"
   },
   "keywords": [],
-  "author": "",
+  "authors": [
+    "Derian Córdoba",
+    "Jonathan Mendoza"
+  ],
   "license": "ISC",
   "dependencies": {
-    "@prisma/client": "^3.6.0",
+    "@babel/runtime": "^7.16.5",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "handlebars": "^4.7.7"
+    "express-handlebars": "^6.0.2",
+    "handlebars": "^4.7.7",
+    "mongodb": "^4.2.2",
+    "mongoose": "^6.1.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.5",
+    "@babel/node": "^7.16.5",
+    "@babel/plugin-transform-runtime": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
     "eslint": "^8.4.1",
-    "express-handlebars": "^6.0.2",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.15",
-    "prisma": "^3.6.0"
+    "ncp": "^2.0.0",
+    "nodemon": "^2.0.15"
   }
 }
