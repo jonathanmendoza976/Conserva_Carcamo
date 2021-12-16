@@ -11,7 +11,15 @@
             </div>
           </div>
           <div class="card-body">
-            <img src="/img/products/{{images}}" class="img-fluid" />
+            {{#each images}}
+              {{#if @first}}
+                <img
+                  src="/img/products/{{this}}"
+                  class="card-img-top"
+                  alt="{{name}}"
+                />
+              {{/if}}
+            {{/each}}
             <p class="text-muted">
               {{description}}
             </p>
