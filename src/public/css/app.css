@@ -298,10 +298,11 @@ p {
 
 /* carrousell-demonstrations */
 
-.carrousell-demonstrations{
+.footer-demonstrations{
   width: 100vw;
   height: 500px;
   background-color: #222;
+  padding-top: 50px;
 }
 
 .images-demonstrations{
@@ -319,7 +320,7 @@ p {
 /* social networks */
 
 .social-networks{
-  margin-top: 30px;
+  margin: 50px 0 100px 0;
   display: flex;
   justify-content: center;
 }
@@ -427,3 +428,10 @@ p {
 }
 
 
+
+/* rights reserved */
+
+.rights-reserved{
+  color: #aaa;
+  text-align: center;
+}
