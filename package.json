@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec babel-node src/index.js",
+    "dev": "nodemon --exec npx babel-node src/index.js",
     "build": "babel src -d build && ncp src/views build/views && ncp src/public build/public",
     "start": "node build/index.js",
     "eslint": "eslint . --fix"
