@@ -2,7 +2,7 @@
   <h3>
     Agregar producto
   </h3>
-  <form action="/products/create" method="POST">
+  <form action="/products/create" method="POST" enctype="multipart/form-data">
     <div>
       <label for="name">
         Nombre
@@ -36,6 +36,19 @@
         placeholder="price"
         id="price"
         class="form-control rounded-0 bg-dark text-white"
+      />
+    </div>
+    <div>
+      <label for="images">
+        Imagenes
+      </label>
+      <input
+        type="file"
+        name="images"
+        placeholder="images"
+        id="images"
+        class="form-control rounded-0 bg-dark text-white"
+        multiple
       />
     </div>
     <button class="btn btn-primary btn-sm mt-2">
