@@ -19,7 +19,7 @@ export const store = async (req, res) => {
   try {
     const {name, description, price} = req.body
     const images = req.files.map((file) => file.originalname)
-    console.log(images)
+    console.log(req.files)
     const product = new Product({name, description, price, images})
     await product.save()
     res.redirect('/products')
