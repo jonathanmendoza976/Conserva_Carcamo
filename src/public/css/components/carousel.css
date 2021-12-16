@@ -1,4 +1,122 @@
-.carousel-inner > .carousel-item > img {
-  width: 100% !important;
-  height: 75vh;
+
+/* SLIDER */
+
+#introCarousel,
+.carousel-inner,
+.carousel-item,
+.carousel-item.active {
+    height: 100vh;
+}
+
+
+.carousel-item:nth-child(1) {
+    background-image: url("../../img/carrousell01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+.carousel-item:nth-child(2) {
+    background-image: url("../../img/carrousel04.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+    background-attachment: fixed;
+
+}
+
+.carousel-item:nth-child(3) {
+    background-image: url("../../img/carrousell02.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+    background-attachment: fixed;
+
+}
+
+/* Height for devices larger than 576px */
+@media (min-width: 992px) {
+    #introCarousel {
+        margin-top: -58.59px;
+    }
+}
+
+.navbar .nav-link {
+    color: #fff !important;
+}
+
+.carousel-1 {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-2 {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.carousel-3 {
+    background: linear-gradient(
+        45deg,
+        rgba(29, 236, 197, 0.7),
+        rgba(91, 14, 214, 0.7) 100%
+    );
+}
+
+
+
+.raise:hover,
+.raise:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    -webkit-transform: translateY(-0.25em);
+    transform: translateY(-0.25em);
+}
+
+
+.raise {
+    --color: #888;
+    --hover: #fff;
+}
+
+.boton {
+    color: var(--color);
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+}
+.boton:hover, .boton:focus {
+    border-color: var(--hover);
+    color: #fff;
+}
+
+.boton {
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+}
+
+.instagram{
+    color: #fff;
+}
+
+.instagram:hover{
+    color: rgb(225,48,108);
+}
+
+.facebook{
+    color: #fff;
+}
+
+.facebook:hover{
+    color: rgb(0, 0, 255);
+}
+
+.twitter{
+    color: #fff;
+}
+
+.twitter:hover{
+    color: rgb(0, 170, 228);
 }
